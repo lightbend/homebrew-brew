@@ -65,6 +65,10 @@ To uninstall `kubectl-cloudflow` run `brew uninstall kubectl-cloudflow`
 
 To update `kubectl-cloudflow` run `brew update kubectl-cloudflow`
 
+## Update the `akkasls` formula
+
+To update the `akkasls.rb` formula file, run `node scripts/update.js`
+
 ## Contributing
 
 We welcome all contributions! [Pull requests](https://github.com/lightbend-labs/homebrew-brew/pulls) are the preferred way to share your contributions. For major changes, please open [an issue](https://github.com/lightbend-labs/homebrew-brew/issues) first to discuss what you would like to change.
