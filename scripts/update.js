@@ -24,6 +24,7 @@ const req = http.request(options, function (res) {
         lines.forEach(element => {
             if (element.includes('darwin')) {
                 const version = element.substring(element.indexOf('amd64_') + 6, element.indexOf('.tar.gz'));
+                console.log(`Found version ${version} in stable.txt`);
                 const sha = element.substring(0, element.indexOf(' '));
                 updateLine(16, `    version \\"${version}\\"`);
                 updateLine(23, `        sha256 \\"${sha}\\"`);
