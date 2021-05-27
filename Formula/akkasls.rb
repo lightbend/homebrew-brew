@@ -30,6 +30,9 @@ class Akkasls < Formula
 
     def install
         bin.install "akkasls"
+        (bash_completion/"akkasls").write `#{bin}/akkasls completion --shell bash`
+        (fish_completion/"akkasls.fish").write `#{bin}/akkasls completion --shell fish`
+        (zsh_completion/"_akkasls").write `#{bin}/akkasls completion --shell zsh`
     end
 
     def caveats
