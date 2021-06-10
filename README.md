@@ -1,4 +1,4 @@
-# Lightbend Labs Homebrew Tap
+# Lightbend Labs Homebrew Tap 
 
 This repository is a `tap` that you can use with [`brew`](https://brew.sh) to install Lightbend tools onto your system. Currently supported tools are:
 
