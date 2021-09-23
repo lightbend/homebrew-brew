@@ -14,7 +14,6 @@
 
 class Akkasls < Formula
     version "0.0.41"
-
     desc "Akka Serverless :: Command Line Interface"
     homepage "https://akkaserverless.com"
     license ""
