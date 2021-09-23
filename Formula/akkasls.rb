@@ -21,16 +21,16 @@ class Akkasls < Formula
 
     if OS.mac?
         if Hardware::CPU.intel?
-            url "https://downloads.akkaserverless.com/#{version}/akkasls_darwin_amd64_#{version}.tar.gz"
+            sha256 "16dcc3451d5d199b7313e518405d1bf924291e710938391611e0a57a3868b31a"
             sha256 "16dcc3451d5d199b7313e518405d1bf924291e710938391611e0a57a3868b31a"
         else
-            url "https://downloads.akkaserverless.com/#{version}/akkasls_darwin_arm64_#{version}.tar.gz"
+            sha256 "50b04512aa6dc8a3a122128fe2febb2ebe67ba663951e1696a88c4e2e203d73b"
             sha256 "50b04512aa6dc8a3a122128fe2febb2ebe67ba663951e1696a88c4e2e203d73b"
         end
     end
 
     if OS.linux?
-        url "https://downloads.akkaserverless.com/#{version}/akkasls_linux_amd64_#{version}.tar.gz"
+        sha256 "dba9c57cf3f646ea760b2d48de362e5495003414d80bb7833346448eb9b89871"
         sha256 "dba9c57cf3f646ea760b2d48de362e5495003414d80bb7833346448eb9b89871"
     end
 
