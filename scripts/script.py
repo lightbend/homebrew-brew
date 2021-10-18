@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import requests as req
 import subprocess
+from sys import platform
 
 scriptlines = {
     "version": ["16",'    version \\"{0}\\"'],
@@ -28,14 +29,18 @@ resp = req.get(url)
 
 lines = resp.text.splitlines()
 
+sedCommand = "sed"
+if platform == "darwin":
+    sedCommand = "gsed"
+
 for line in lines:
     d = parseLine(line)
     if d['os'] + d['processor'] in scriptlines:
         ## Update the SHA
         ln = scriptlines[d['os'] + d['processor']][0]
         ct = scriptlines[d['os'] + d['processor']][1].format(d['sha']) 
-        subprocess.call(["sed -i \"{0}s/.*/{1}/\" Formula/akkasls.rb".format(ln, ct)], shell=True)
+        subprocess.call(["{2} -i \"{0}s/.*/{1}/\" Formula/akkasls.rb".format(ln, ct, sedCommand)], shell=True)
         ## Update the version
         ln = scriptlines['version'][0]
         ct = scriptlines['version'][1].format(d['version'])
-        subprocess.call(["sed -i \"{0}s/.*/{1}/\" Formula/akkasls.rb".format(ln, ct)], shell=True)
+        subprocess.call(["{2} -i \"{0}s/.*/{1}/\" Formula/akkasls.rb".format(ln, ct, sedCommand)], shell=True)

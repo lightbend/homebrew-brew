@@ -25,6 +25,9 @@ jobs:
         result-encoding: string
     - uses: actions/checkout@v2
       if: steps.check.outputs.result == 'build'
+      # Force fetching only latest main
+      with:
+        ref: 'main'
     - name: Run command
       run: python3 -m pip install requests && ./scripts/script.py
       if: steps.check.outputs.result == 'build'
