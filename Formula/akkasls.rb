@@ -13,7 +13,7 @@
 # limitations under the License.
 
 class Akkasls < Formula
-    version "0.1.5"
+    version "0.1.6"
     desc "Akka Serverless :: Command Line Interface"
     homepage "https://akkaserverless.com"
     license ""
@@ -21,16 +21,16 @@ class Akkasls < Formula
     if OS.mac?
         if Hardware::CPU.intel?
             url "https://downloads.akkaserverless.com/#{version}/akkasls_darwin_amd64_#{version}.tar.gz"
-            sha256 "a3e23c5373b60512f5cedbe724757864bbf536a2a8158721d3c64702df6e4e98"
+            sha256 "e44cf417053bd51b3cbd0482550697c5e6abedd7931509e627d9418b08e5c7db"
         else
             url "https://downloads.akkaserverless.com/#{version}/akkasls_darwin_arm64_#{version}.tar.gz"
-            sha256 "aeaac5e5f0ce2d7ab8697bd6ec5b9602234119761fe1ff13379d58f0db6ba353"
+            sha256 "1df41941ad7d8df003042160021cbf66dcb05f1c45b0d68432f866e5543c66c8"
         end
     end
 
     if OS.linux?
         url "https://downloads.akkaserverless.com/#{version}/akkasls_linux_amd64_#{version}.tar.gz"
-        sha256 "947fe8dff6728db000c152fba88c208fb2c9ac1f93308f94038be7eddbd3f088"
+        sha256 "30acf66462600ace9849d6a32545316198f76204a9c696a70ebb5310f08b5392"
     end
 
     def install
