@@ -46,7 +46,9 @@ class Akkasls < Formula
         
             Accounts:
                 To use #{name} you'll need to have an active account on Akka Serverless.
-                You can register for an account on https://console.akkaserverless.com
+                You can register for an account on https://console.akkaserverless.lightbend.com 
+                or sign up using 
+                #{name} auth signup
 
             Log in:
                 To log in to your Akka Serverless account, run
