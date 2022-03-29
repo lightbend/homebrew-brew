@@ -1,7 +1,8 @@
-# Lightbend Labs Homebrew Tap
+# Lightbend Homebrew Tap
 
-This repository is a `tap` that you can use with [`brew`](https://brew.sh) to install Lightbend tools onto your system. Currently supported tools are:
+This repository is a `tap` that you can use with [`brew`](https://brew.sh) to install Lightbend tools onto your system. Currently, supported tools are:
 
+* `kalix` the command line interface for [Kalix](https://kalix.io)
 * `akkasls` the command line interface for [Akka Serverless](https://akkaserverless.com)
 * `kubectl-cloudflow` the command line interface for [Cloudflow](https://cloudflow.io) and [Akka Data Pipelines](https://developer.lightbend.com/docs/cloudflow/current/index.html)
 
@@ -12,7 +13,7 @@ This repository is a `tap` that you can use with [`brew`](https://brew.sh) to in
 To use these formulae with `brew`, you'll need to install the tap first
 
 ```bash
-brew tap lightbend-labs/brew
+brew tap lightbend/brew
 ```
 
 ### Uninstall
@@ -20,21 +21,40 @@ brew tap lightbend-labs/brew
 If you want to remove the tap, you can run
 
 ```bash
-brew untap lightbend-labs/brew
+brew untap lightbend/brew
 ```
 
 ### Update
 
 Updating for formulae installed from this tap is all done via `brew update`. 
 
+## `kalix`
+
+### Install
+
+To install `kalix` using this tap run `brew install lightbend/brew/kalix` (which will install the tap automatically) or run
+
+```bash
+brew tap lightbend/brew
+brew install kalix
+```
+
+### Uninstall
+
+To uninstall `kalix` run `brew uninstall kalix`
+
+### Update
+
+To update `kalix` run `brew update kalix`
+
 ## `akkasls`
 
 ### Install
 
-To install `akkasls` using this tap run `brew install lightbend-labs/brew/akkasls` (which will install the tap automatically) or run
+To install `akkasls` using this tap run `brew install lightbend/brew/akkasls` (which will install the tap automatically) or run
 
 ```bash
-brew tap lightbend-labs/brew
+brew tap lightbend/brew
 brew install akkasls
 ```
 
@@ -50,10 +70,10 @@ To update `akkasls` run `brew update akkasls`
 
 ### Install
 
-To install `kubectl-cloudflow` using this tap run `brew install lightbend-labs/brew/kubectl-cloudflow` (which will install the tap automatically) or run
+To install `kubectl-cloudflow` using this tap run `brew install lightbend/brew/kubectl-cloudflow` (which will install the tap automatically) or run
 
 ```bash
-brew tap lightbend-labs/brew
+brew tap lightbend/brew
 brew install kubectl-cloudflow
 ```
 
@@ -71,7 +91,7 @@ To update the `akkasls.rb` formula file, run `node scripts/update.js`
 
 ## Contributing
 
-We welcome all contributions! [Pull requests](https://github.com/lightbend-labs/homebrew-brew/pulls) are the preferred way to share your contributions. For major changes, please open [an issue](https://github.com/lightbend-labs/homebrew-brew/issues) first to discuss what you would like to change.
+We welcome all contributions! [Pull requests](https://github.com/lightbend/homebrew-brew/pulls) are the preferred way to share your contributions. For major changes, please open [an issue](https://github.com/lightbend/homebrew-brew/issues) first to discuss what you would like to change.
 
 ## Support
 
