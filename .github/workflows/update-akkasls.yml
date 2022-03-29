@@ -35,7 +35,6 @@ jobs:
       uses: peter-evans/create-pull-request@v3
       if: steps.check.outputs.result == 'build'
       with:
-        assignees: retgits
         title: Update akkasls version
         branch-suffix: short-commit-hash
         body: Update akkasls to latest stable version
