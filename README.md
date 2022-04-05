@@ -89,6 +89,10 @@ To update `kubectl-cloudflow` run `brew update kubectl-cloudflow`
 
 To update the `akkasls.rb` formula file, run `node scripts/update.js`
 
+## Update the `kalix` formula
+
+To update the `kalix.rb` formula file, run `node scripts/kalix-update.js`
+
 ## Contributing
 
 We welcome all contributions! [Pull requests](https://github.com/lightbend/homebrew-brew/pulls) are the preferred way to share your contributions. For major changes, please open [an issue](https://github.com/lightbend/homebrew-brew/issues) first to discuss what you would like to change.
