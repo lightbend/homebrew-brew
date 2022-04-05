@@ -1,0 +1,44 @@
+name: Update Kalix CLI version
+
+## This workflow can be triggered manually
+on:
+  workflow_dispatch:
+  issues:
+    types: ["opened"]
+
+jobs:
+  update_akkasls:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/github-script@v2
+      id: check
+      with:
+        script: |
+          if ("${{ github.event.issue.title }}" != "update kalix" && "${{ github.event_name }}" != "workflow_dispatch") {
+            console.log('Issue is not to update kalix');
+            return 'stop'
+          } else {
+            return 'build'
+          }
+          console.log("${{ github.event_name }}")
+        result-encoding: string
+    - uses: actions/checkout@v2
+      if: steps.check.outputs.result == 'build'
+      # Force fetching only latest main
+      with:
+        ref: 'main'
+    - name: Run command
+      run: python3 -m pip install requests && ./scripts/kalix-script.py
+      if: steps.check.outputs.result == 'build'
+    - name: Create Pull Request
+      uses: peter-evans/create-pull-request@v3
+      if: steps.check.outputs.result == 'build'
+      with:
+        title: Update kalix CLI version
+        branch-suffix: short-commit-hash
+        body: Update kalix CLI to latest stable version
+        delete-branch: true
+        labels: enhancement, Feature
+        commit-message: "feat(cli): update kalix CLI to the latest stable version"
+        author: "GitHub <noreply@github.com>"
