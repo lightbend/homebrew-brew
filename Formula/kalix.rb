@@ -24,7 +24,7 @@ class Kalix < Formula
             sha256 "d6b25c148d6ddc07817cb899e5dc55d4962839ad395c17ff99b4228a15d8c392"
         else
             url "https://downloads.kalix.io/#{version}/kalix_darwin_arm64_#{version}.tar.gz"
-            sha256 "adf16d3dbbf5d6c8225bc9d11452f008b99edca7655372439804730d814b8a33"
+            sha256 "3781734c1d0b6743675ee77c2d79ace7de97311631c8229a176a6b50464a66a7"
         end
     end
 
