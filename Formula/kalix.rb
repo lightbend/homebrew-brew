@@ -13,24 +13,24 @@
 # limitations under the License.
 
 class Kalix < Formula
-    version "0.1.10"
+    version "0.1.11"
     desc "Kalix :: Command Line Interface"
     homepage "https://kalix.io"
     license ""
 
     if OS.mac?
         if Hardware::CPU.intel?
-            url "https://downloads.akkaserverless.com/#{version}/kalix_darwin_amd64_#{version}.tar.gz"
-            sha256 "5bece23ea934bdbcbb8a3c42f15c9d0d3219bf066967f2111913032c55f04dc9"
+            url "https://downloads.kalix.io/#{version}/kalix_darwin_amd64_#{version}.tar.gz"
+            sha256 "d6b25c148d6ddc07817cb899e5dc55d4962839ad395c17ff99b4228a15d8c392"
         else
-            url "https://downloads.akkaserverless.com/#{version}/kalix_darwin_arm64_#{version}.tar.gz"
+            url "https://downloads.kalix.io/#{version}/kalix_darwin_arm64_#{version}.tar.gz"
             sha256 "adf16d3dbbf5d6c8225bc9d11452f008b99edca7655372439804730d814b8a33"
         end
     end
 
     if OS.linux?
-        url "https://downloads.akkaserverless.com/#{version}/kalix_linux_amd64_#{version}.tar.gz"
-        sha256 "0ca7709205013933542375fbd2945d137076c99debb473eb7a63859bc6d9b137"
+        url "https://downloads.kalix.io/#{version}/kalix_linux_amd64_#{version}.tar.gz"
+        sha256 "91518e037dfcacd7e16120bc6088ad4bfb15f9c66cbd8f24a3d71bfb3cb679a7"
     end
 
     def install
