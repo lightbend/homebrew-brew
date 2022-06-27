@@ -13,7 +13,7 @@
 # limitations under the License.
 
 class Kalix < Formula
-    version "2.0.1"
+    version "2.0.2"
     desc "Kalix :: Command Line Interface"
     homepage "https://kalix.io"
     license ""
@@ -21,16 +21,16 @@ class Kalix < Formula
     if OS.mac?
         if Hardware::CPU.intel?
             url "https://downloads.kalix.io/#{version}/kalix_darwin_amd64_#{version}.tar.gz"
-            sha256 "b19d813414b65d137978b1956ac13c5bf14d7e5b2b31f7eb85772a5eff449abf"
+            sha256 "e660e13b9091053708069b1fb38fc688e0cb9ec010d2be94e6b19c695a36e443"
         else
             url "https://downloads.kalix.io/#{version}/kalix_darwin_arm64_#{version}.tar.gz"
-            sha256 "cfaac8a3071fc2b7b0e4d8a0f20abaaa8683802df230167bb07369093c18eb71"
+            sha256 "35563c8d00eb981881f147f5ccd0768a4c5bacc8627029cb9ca0de7a6c8ddd1f"
         end
     end
 
     if OS.linux?
         url "https://downloads.kalix.io/#{version}/kalix_linux_amd64_#{version}.tar.gz"
-        sha256 "8285c12cb3d67128fb4664fb5255f35c69f67ac07d2609a8bcbb06f3470ff7ac"
+        sha256 "410b869b4260adfc7fd2a01058b1c006347881d2ed125a21a3285802ca2dc53c"
     end
 
     def install
