@@ -32,7 +32,7 @@ jobs:
       run: python3 -m pip install requests && ./scripts/script.py
       if: steps.check.outputs.result == 'build'
     - name: Create Pull Request
-      uses: peter-evans/create-pull-request@v3
+      uses: peter-evans/create-pull-request@v4
       if: steps.check.outputs.result == 'build'
       with:
         title: Update akkasls version
