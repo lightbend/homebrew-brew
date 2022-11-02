@@ -11,11 +11,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/github-script@v2
+    - uses: actions/github-script@v6
       id: check
       with:
         script: |
-          if ("${{ github.event.issue.title }}" != "update akkasls" && "${{ github.event_name }}" != "workflow_dispatch") {
+          if ("${{ github.rest.issue.title }}" != "update akkasls" && "${{ github.event_name }}" != "workflow_dispatch") {
             console.log('Issue is not to update akkasls');
             return 'stop'
           } else {
@@ -23,7 +23,7 @@ jobs:
           }
           console.log("${{ github.event_name }}")
         result-encoding: string
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
       if: steps.check.outputs.result == 'build'
       # Force fetching only latest main
       with:
