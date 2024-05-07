@@ -16,7 +16,7 @@ class Kalix < Formula
     version "2.0.42"
     desc "Kalix :: Command Line Interface"
     homepage "https://kalix.io"
-    license ""
+    license "https://downloads.lightbend.com/website/legal/lightbend-commercial-software-license-agreement.txt"
 
     if OS.mac?
         if Hardware::CPU.intel?
