@@ -35,6 +35,7 @@ class Kalix < Formula
 
     def install
         bin.install "kalix"
+        prefix.install "lightbend-commercial-software-license-agreement.txt"
         (bash_completion/"kalix").write `#{bin}/kalix completion --shell bash`
         (fish_completion/"kalix.fish").write `#{bin}/kalix completion --shell fish`
         (zsh_completion/"_kalix").write `#{bin}/kalix completion --shell zsh`
