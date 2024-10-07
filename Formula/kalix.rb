@@ -13,7 +13,7 @@
 # limitations under the License.
 
 class Kalix < Formula
-    version "2.0.51"
+    version "2.0.52"
     desc "Kalix :: Command Line Interface"
     homepage "https://kalix.io"
     license "https://downloads.lightbend.com/website/legal/lightbend-commercial-software-license-agreement.txt"
@@ -21,16 +21,16 @@ class Kalix < Formula
     if OS.mac?
         if Hardware::CPU.intel?
             url "https://downloads.kalix.io/#{version}/kalix_darwin_amd64_#{version}.tar.gz"
-            sha256 "cbba51d7b39bdfa8fd9e0b03b24a59bdef6503030025c1659d447a0ca64302bc"
+            sha256 "2d148fca952230b7dc33160f25266de9252cb2291d37edefabf695558c671c4f"
         else
             url "https://downloads.kalix.io/#{version}/kalix_darwin_arm64_#{version}.tar.gz"
-            sha256 "d5624e03efabe0d68bc18b4e3f58921dd287c6e8084226769d33a4695726fa2d"
+            sha256 "6b99c96e161a229e7d0afa4abb95b542ffd89c033a4ca7ec7b2ebae91e74cfe5"
         end
     end
 
     if OS.linux?
         url "https://downloads.kalix.io/#{version}/kalix_linux_amd64_#{version}.tar.gz"
-        sha256 "5b2cd8e8764c8084978533323b4f576defa533baec8a53e16788242f71cdd10e"
+        sha256 "7e41f5d61cc052b34f35e068601aed98533e50415660a4ad31e60c2d1bf7a2b5"
     end
 
     def install
